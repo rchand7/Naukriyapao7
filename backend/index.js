@@ -18,8 +18,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// Update CORS options to use the correct frontend URL
 const corsOptions = {
-    origin: 'https://naukriyapao7-1.onrender.com', // change this to the frontend URL in production
+    origin: 'https://naukriyapao7-2.onrender.com', // Updated to new frontend URL
     credentials: true
 };
 app.use(cors(corsOptions));
@@ -49,3 +50,4 @@ app.listen(PORT, () => {
     connectDB();  // Connect to the database
     console.log(`Server running at port ${PORT}`);
 });
+
